@@ -1,0 +1,10 @@
+<div class="container">
+  <h2 class="text-center py-5">RESULT</h2>
+  <% if @goal > 0 %>
+    <p>Sorry but <%= @word.join %> is not an english word</p>
+  <% elsif @goal < 0%>
+    <p>Sorry but <%= @word.join %> cant be build out of <%= @grid.join(', ') %></p>
+  <% elsif @goal = 0%>
+    <p>Congratulations ! <%= @word.join %> is a valid english word</p>
+  <% end %>
+</div>
